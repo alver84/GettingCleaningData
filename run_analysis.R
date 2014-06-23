@@ -29,7 +29,7 @@ df_activity <- read.table(filename_activity, col.names = c("ID", "Name"))
 
 ##forms a vector containing the numbers of columns with mean() and std() in the names
 id_means <- character()
-id_means <- grep("mean\\(\\) | std\\(\\)", df_features$Name)
+id_means <- grep("mean\\(\\)|std\\(\\)", df_features$Name)
 id_means <- sub("^", "V", id_means)
 cat(paste(shQuote(id_means, type="cmd"), collapse=", "))
 
